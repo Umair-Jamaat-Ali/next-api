@@ -1,13 +1,16 @@
 import { NextResponse } from "next/server"
 
 
-export const GET = () => {
+export const GET = (req) => {
   let  service = {
         name:"umair",
         course: "web and mobile deveolpment app",
         duration: "one years",
         loaction: "saylani welfare faisalabad"
     }
+
+    const body = req.json();
+    console.log("body", body);
 
     return NextResponse.json(service);
 }
