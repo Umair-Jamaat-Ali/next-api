@@ -9,14 +9,16 @@ export const GET = (req) => {
         loaction: "saylani welfare faisalabad"
     }
 
-    const body = req.json();
-    console.log("body", body);
+    
 
     return NextResponse.json(service);
 }
 
 
-export const POST = () => {
+export const POST = (req) => {
+
+    const body = req.json();
+    console.log("body", body);
     return NextResponse.json({message:"Post function called"});
 }
 
